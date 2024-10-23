@@ -1,0 +1,15 @@
+{
+  "type": "module",
+  "scripts": {
+    "start:3": "docker compose up --build --detach mongo-three-volumes",
+    "clean:3": "rm -r .data3",
+    "start:1": "docker compose up --build --detach mongo-single-volume",
+    "clean:1": "rm -r .data1",
+    "stop": "docker compose down --volumes"
+  },
+  "dependencies": {
+    "express": "^5.0.1",
+    "mongodb": "^6.10.0",
+    "mongoose": "8.6.1"
+  }
+}

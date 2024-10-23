@@ -1,0 +1,16 @@
+services:
+  mongo-three-volumes:
+    image: 'mongodb/mongodb-atlas-local:7'
+    ports:
+      - '27017:27017'
+    volumes:
+      - './.data3/db:/data/db'
+      - './.data3/configdb:/data/configdb'
+      - './.data3/mongot:/data/mongot'
+
+  mongo-single-volume:
+    image: 'mongodb/mongodb-atlas-local:7'
+    ports:
+      - '27017:27017'
+    volumes:
+      - './.data1:/data'
